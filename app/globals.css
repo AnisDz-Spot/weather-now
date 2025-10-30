@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --orange-500: #ff7c0a;
+  --blue-500: #4455da;
+  --blue-700: #2d1c9c;
+  --blue-bg: #0f0148;
+  --input-bg: #505053ba;
+  --neutral-900: #03012d;
+  --neutral-800: #272541;
+  --neutral-700: #312f4b;
+  --neutral-600: #3d3b5e;
+  --neutral-300: #aeaeb7;
+  --neutral-200: #d5d4d9;
+}
+
+@theme {
+  --font-bricolage: var(--font-bricolage);
+  --font-dm-sans: var(--font-dm-sans);
+  --color-blue-bg: var(--blue-bg);
+  --color-input-bg: var(--input-bg);
+}
+
+body {
+  font-family: var(--font-bricolage), sans-serif;
+  color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-bricolage), sans-serif;
+}
+a,
+p,
+span {
+  font-family: var(--font-dm-sans), sans-serif;
+}
+
+@layer utilities {
+  .scrollbar-custom {
+    @apply overflow-y-scroll;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: var(--blue-500);
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background: var(--blue-700);
+    border-radius: 9999px; /* fully rounded */
+  }
+
+  .scrollbar-custom::-webkit-scrollbar-thumb:hover {
+    background: var(--blue-700);
+  }
+
+  /* Firefox support */
+  .scrollbar-custom {
+    scrollbar-width: thin;
+    scrollbar-color: var(--blue-500) var(--blue-700);
+  }
+}
