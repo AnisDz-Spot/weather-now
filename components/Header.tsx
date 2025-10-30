@@ -19,7 +19,7 @@ const Header = () => {
         <Units />
       </nav>
       <h1 className="text-center text-3xl md:text-4xl font-semibold my-8">
-        How's the sky looking today?
+        How&apos;s the sky looking today?
       </h1>
       <SearchBar />
     </header>

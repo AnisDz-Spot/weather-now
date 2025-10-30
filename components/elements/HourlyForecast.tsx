@@ -60,7 +60,7 @@ const HourlyForecast = () => {
             return (
               <div
                 className="flex justify-between items-center bg-gray-600 rounded-md p-2"
-                key={i}
+                key={`item-${i}`}
               >
                 <div className="w-full flex items-center gap-2">
                   <Image
